@@ -4,11 +4,32 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
+
     public float speed = 5f;
 
-    public Transform dustBoxes;
+    private float preX;
+    private float preY;
+
+    public Transform displayDustBoxes;
 
     public GameObject instantiateDustBox;
+
+    private int randomNum;
+    public GameObject[] dustBoxes;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,19 +40,15 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //一つクリアもしくは失敗したあと
-        //※現状はクリックしたら実行
-        if (Input.GetMouseButtonUp(0)) {
-            setDustBox();
-        }
+
     }
 
-    void setDustBox()
+    public void NextDustBox()
     {
-        foreach (Transform dustBox in dustBoxes)
+        foreach (Transform dustBox in displayDustBoxes)
         {
-            float preX = dustBox.position.x;
-            float preY = dustBox.position.y;
+            preX = dustBox.position.x;
+            preY = dustBox.position.y;
 
             //右側のいずれかだったら
             if (preX > 0)
@@ -43,7 +60,7 @@ public class GameController : MonoBehaviour
                 if(preX == 0.9f)
                 {
                     //どのゴミ箱かを保持する
-                    AttackController.instance.SetDustBoxName(dustBox.name);
+                    AttackController.instance.SetDustBox(dustBox.name);
                 }
             }
             //真ん中もしくは左側のいずれかだったら
@@ -53,24 +70,28 @@ public class GameController : MonoBehaviour
                 dustBox.position = new Vector3(preX - 0.9f, preY + 0.1f, 0);
             }
         }
+
+        //ゴミ箱の中からどれを出すか
+        randomNum = Random.Range(0, dustBoxes.Length);
+
         //一番右に新規ゴミ箱生成
-        Instantiate(instantiateDustBox, new Vector3(1.8f, 0.2f, 0), Quaternion.identity, dustBoxes);
+        Instantiate(dustBoxes[randomNum], new Vector3(1.8f, 0.2f, 0), Quaternion.identity, displayDustBoxes);
 
     }
 
     private IEnumerator InstantiateToReady()
     {
-        setDustBox();
+        NextDustBox();
 
         // 1秒待つ  
         yield return new WaitForSeconds(0.5f);
 
-        setDustBox();
+        NextDustBox();
 
         // 2秒待つ  
         yield return new WaitForSeconds(0.5f);
 
-        setDustBox();
+        NextDustBox();
     }
 
 
