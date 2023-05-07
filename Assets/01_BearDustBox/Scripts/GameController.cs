@@ -13,8 +13,6 @@ public class GameController : MonoBehaviour
 
     public Transform displayDustBoxes;
 
-    //public GameObject instantiateDustBox;
-
     private int randomNum;
     public GameObject[] dustBoxes;
 
