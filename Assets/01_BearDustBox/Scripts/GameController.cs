@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
 
     public Transform displayDustBoxes;
 
-    public GameObject instantiateDustBox;
+    //public GameObject instantiateDustBox;
 
     private int randomNum;
     public GameObject[] dustBoxes;
@@ -83,12 +83,10 @@ public class GameController : MonoBehaviour
     {
         NextDustBox();
 
-        // 1秒待つ  
         yield return new WaitForSeconds(0.5f);
 
         NextDustBox();
 
-        // 2秒待つ  
         yield return new WaitForSeconds(0.5f);
 
         NextDustBox();

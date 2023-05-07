@@ -11,7 +11,10 @@ public class AttackController : MonoBehaviour
     string[] nowDustBoxCommand;
 
     //チェック中の配列番号
-    int nowCount = 0;
+    public int nowCount = 0;
+
+    //アニメーション用配列番号
+    public int animationCount = 0;
 
     //空のゴミ箱コマンド配列
     string[] emptyDustBoxCommand = new string[] { "Open", "Close" };
@@ -98,6 +101,7 @@ public class AttackController : MonoBehaviour
         {
             //チェック中の配列番号を+1
             nowCount++;
+            animationCount++;
 
             //チェック中の配列番号が、配列の要素総数を超えていたら次のゴミ箱へ
             if(nowCount == nowDustBoxCommand.Length)
@@ -111,7 +115,6 @@ public class AttackController : MonoBehaviour
                 //スコアに+1点
                 UIController.instance.addScore(1);
             }
-            //TODO 必要に応じて配列初期化
         }
         //不正解だったら
         else
