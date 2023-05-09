@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-    //アニメーション取得フラグ
+    //アニメーター取得フラグ
     private bool getAnimation = false;
-    //アニメーション
-    private Animator animator;
+    //ゴミ箱アニメーター
+    private Animator animatorDustBox;
+    //一時ゲームオブジェクト
+    //private GameObject tmpGameObject;
+    //爆発スプライトレンダラー
+    //private SpriteRenderer SRExplosion;
+    //爆発アニメーター
+    //private Animator animatorExplosion;
+    //爆発アニメーションゲームオブジェクト
+    public GameObject explosion;
     
     // Start is called before the first frame update
     void Start()
@@ -18,13 +26,25 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ゴミ箱が真ん中かつ、アニメーション未取得
+        //ゴミ箱が真ん中かつ、アニメーター未取得
         if(transform.position.x == 0 && !getAnimation)
         {
-            //アニメーション取得
-            animator = GetComponent<Animator>();
+            //アニメーター取得
+            animatorDustBox = GetComponent<Animator>();
 
-            //アニメーション取得フラグをオンにする
+            //if(animatorDustBox.name.Contains("Bomb"))
+            //{
+            //    Debug.Log("ぼむ");
+            //    //子オブジェクトを取得
+            //    tmpGameObject = transform.GetChild(0).gameObject;
+            //    //子オブジェクトのスプライトレンダラー取得
+            //    SRExplosion = tmpGameObject.GetComponent<SpriteRenderer>();
+            //    //子オブジェクトのアニメーター取得
+            //    animatorExplosion = tmpGameObject.GetComponent<Animator>();
+            //    Debug.Log("もろもろ取得OK");
+            //}
+
+            //アニメーター取得フラグをオンにする
             getAnimation = true;
 
             //自ゴミ箱用にアニメーションカウントを初期化
@@ -34,7 +54,34 @@ public class AnimationController : MonoBehaviour
         if (getAnimation)
         {
             //チェック中の配列番号をセット
-            animator.SetInteger("nowCount", AttackController.instance.animationCount);
+            animatorDustBox.SetInteger("nowCount", AttackController.instance.animationCount);
         }
+    }
+
+    public void Hello()
+    {
+        Debug.Log("Hello");
+        ////Debug.Log("ぼむ");
+        ////子オブジェクトを取得
+        //tmpGameObject = transform.GetChild(0).gameObject;
+        ////子オブジェクトのスプライトレンダラー取得
+        //SRExplosion = tmpGameObject.GetComponent<SpriteRenderer>();
+        ////子オブジェクトのアニメーター取得
+        //animatorExplosion = tmpGameObject.GetComponent<Animator>();
+        ////Debug.Log("もろもろ取得OK");
+
+        ////透過処理を解除
+        ////SRExplosion.color = new Color(255, 255, 255, 255);
+        ////
+        //animatorExplosion.SetInteger("startCount", 1);
+
+        //爆発アニメーションゲームオブジェクトの生成
+        Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
+
+        //TODO NG処理はいずれまとめよう
+        GameController.instance.NextDustBox();
+
+        Debug.Log("all finish");
+
     }
 }
