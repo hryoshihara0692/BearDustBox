@@ -6,17 +6,19 @@ public class AnimationController : MonoBehaviour
 {
     //アニメーター取得フラグ
     private bool getAnimation = false;
+
     //ゴミ箱アニメーター
     private Animator animatorDustBox;
-    //一時ゲームオブジェクト
-    //private GameObject tmpGameObject;
-    //爆発スプライトレンダラー
-    //private SpriteRenderer SRExplosion;
-    //爆発アニメーター
-    //private Animator animatorExplosion;
+
     //爆発アニメーションゲームオブジェクト
     public GameObject explosion;
-    
+
+    //クマ攻撃アニメーションゲームオブジェクト
+    public GameObject bearAttack;
+
+    //ゴミ箱終了フラグ
+    private bool finishFlag = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,18 +34,6 @@ public class AnimationController : MonoBehaviour
             //アニメーター取得
             animatorDustBox = GetComponent<Animator>();
 
-            //if(animatorDustBox.name.Contains("Bomb"))
-            //{
-            //    Debug.Log("ぼむ");
-            //    //子オブジェクトを取得
-            //    tmpGameObject = transform.GetChild(0).gameObject;
-            //    //子オブジェクトのスプライトレンダラー取得
-            //    SRExplosion = tmpGameObject.GetComponent<SpriteRenderer>();
-            //    //子オブジェクトのアニメーター取得
-            //    animatorExplosion = tmpGameObject.GetComponent<Animator>();
-            //    Debug.Log("もろもろ取得OK");
-            //}
-
             //アニメーター取得フラグをオンにする
             getAnimation = true;
 
@@ -51,37 +41,69 @@ public class AnimationController : MonoBehaviour
             AttackController.instance.animationCount = 0;
         }
 
-        if (getAnimation)
+        if (getAnimation && !finishFlag)
         {
             //チェック中の配列番号をセット
             animatorDustBox.SetInteger("nowCount", AttackController.instance.animationCount);
         }
+
+        ////ボタン間違えたときはアニメーション停止
+        //if(!finishFlag && AttackController.instance.animationCount == -1)
+        //{
+        //    animatorDustBox.speed = 0;
+
+        //    Debug.Log(AttackController.instance.nowDustBoxName);
+        //    if (AttackController.instance.nowDustBoxName.Contains("Bomb"))
+        //    {
+        //        Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        //    }
+
+        //    finishFlag = true;
+        //}
+
+        if(transform.position.x < 0)
+        {
+            animatorDustBox.speed = 0;
+
+            finishFlag = true;
+        }
     }
 
-    public void Hello()
+    public void Explosion()
     {
-        Debug.Log("Hello");
-        ////Debug.Log("ぼむ");
-        ////子オブジェクトを取得
-        //tmpGameObject = transform.GetChild(0).gameObject;
-        ////子オブジェクトのスプライトレンダラー取得
-        //SRExplosion = tmpGameObject.GetComponent<SpriteRenderer>();
-        ////子オブジェクトのアニメーター取得
-        //animatorExplosion = tmpGameObject.GetComponent<Animator>();
-        ////Debug.Log("もろもろ取得OK");
 
-        ////透過処理を解除
-        ////SRExplosion.color = new Color(255, 255, 255, 255);
-        ////
-        //animatorExplosion.SetInteger("startCount", 1);
+        //爆発＝NGなのでnowCountを0にする
+        AttackController.instance.nowCount = 0;
 
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
 
         //TODO NG処理はいずれまとめよう
         GameController.instance.NextDustBox();
+    }
 
-        Debug.Log("all finish");
+    public void BearAttack()
+    {
+
+        //くま攻撃＝NGなのでnowCountを0にする
+        AttackController.instance.nowCount = 0;
+
+        //爆発アニメーションゲームオブジェクトの生成
+        Instantiate(bearAttack, new Vector3(0f, 0f, 0f), Quaternion.identity);
+
+        //TODO NG処理はいずれまとめよう
+        GameController.instance.NextDustBox();
+    }
+
+    public void False()
+    {
+        animatorDustBox.speed = 0;
+
+        //Debug.Log(AttackController.instance.nowDustBoxName);
+        if (AttackController.instance.nowDustBoxName.Contains("Bomb"))
+        {
+            Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        }
 
     }
 }

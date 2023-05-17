@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c14bdbff7ba746e281cd81b98442f2f
+guid: f71c6a95cd20f44a49f80fb15b665ff2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,127 +129,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bombdustbox-Sheet_2
+      name: Star-Sheet_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 96
-        width: 78
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 40, y: 56}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f0ed3743946b406a9ce65de96035022
-      internalID: 1181238558
+      spriteID: 3b1c381e6df73467fa45ff5a0e6b4258
+      internalID: 738998810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_3
+      name: Star-Sheet_1
       rect:
         serializedVersion: 2
-        x: 154
-        y: 96
-        width: 78
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 40, y: 56}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd1a55942a83c44e7bf42265a4227298
-      internalID: 296549890
+      spriteID: 1b08a100ba0fd4fcaa0aee7cca459677
+      internalID: 739475528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_4
+      name: Star-Sheet_2
       rect:
         serializedVersion: 2
-        x: 282
-        y: 96
-        width: 78
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 40, y: 56}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffd781973dfd342d091ee43320f46aa0
-      internalID: -77504014
+      spriteID: f5d8efc72789b4c41808c397f5658d55
+      internalID: -1194347549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_6
+      name: Star-Sheet_3
       rect:
         serializedVersion: 2
-        x: 411
-        y: 96
-        width: 78
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 40, y: 56}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a5433de0a87145dbbdd6f5923d10202
-      internalID: 937788466
+      spriteID: 2c412f8394a2f4f5483c11fb9450323f
+      internalID: -587320034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_8
+      name: Star-Sheet_4
       rect:
         serializedVersion: 2
-        x: 539
-        y: 95
-        width: 78
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 40, y: 56}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fafe1f8b48554083b14c305198a8e0f
-      internalID: -1816912629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bombdustbox-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 667
-        y: 96
-        width: 78
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ddb6c821af2c41c7af1cd65ba9f2666
-      internalID: 416475119
+      spriteID: 4ba4a6cd0f4834353b4bb6a7c5ed92fe
+      internalID: 619657175
       vertices: []
       indices: 
       edges: []
@@ -265,19 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bombdustbox-Sheet_2: 1181238558
-      bombdustbox-Sheet_8: -1816912629
-      bombdustbox-Sheet_4: -77504014
-      bombdustbox-Sheet_6: 937788466
-      bombdustbox-Sheet_3: 296549890
-      bombdustbox-Sheet_1: 1718859542
-      bombdustbox-Sheet_10: 416475119
-      bombdustbox-Sheet_7: 1203763729
-      bombdustbox-Sheet_11: 1991422898
-      bombdustbox-Sheet_0: 686199863
-      bombdustbox-Sheet_5: -1445681355
-      bombdustbox-Sheet_12: -2090658029
-      bombdustbox-Sheet_9: 181262428
+      Star-Sheet_1: 739475528
+      Star-Sheet_4: 619657175
+      Star-Sheet_0: 738998810
+      Star-Sheet_3: -587320034
+      Star-Sheet_2: -1194347549
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

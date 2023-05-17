@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e37cf307baa53453485c337fb068dffc
+guid: ecfdbeae6d13a4c7aaa2964bd4ae67f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fulldustbox-Sheet_0
+      name: maru-Sheet_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 96
-        width: 63
-        height: 95
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb6e48e9096e433e968f621b5ab024f
-      internalID: 1707391405
+      spriteID: 96e8b6cfc102b4d99b7f143f9b5d823d
+      internalID: -927056091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fulldustbox-Sheet_1
+      name: maru-Sheet_1
       rect:
         serializedVersion: 2
-        x: 167
-        y: 97
-        width: 63
-        height: 95
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,71 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c8e119e8afed41dda764816baf81b75
-      internalID: -1780539098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fulldustbox-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 96
-        width: 63
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 930994c94f65247679d0f6bf1e7ea945
-      internalID: -166943197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fulldustbox-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 426
-        y: 97
-        width: 63
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a89faa9d3e9194dd69373e6b21657892
-      internalID: 1778960813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fulldustbox-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 554
-        y: 96
-        width: 63
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc507edb5dd994397a1bff4d71c3e44a
-      internalID: -73450819
+      spriteID: 90ca3c96952e748f3a42789ae44639a8
+      internalID: -816657059
       vertices: []
       indices: 
       edges: []
@@ -244,12 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fulldustbox-Sheet_5: -73450819
-      fulldustbox-Sheet_0: 1707391405
-      fulldustbox-Sheet_1: -1780539098
-      fulldustbox-Sheet_2: -166943197
-      fulldustbox-Sheet_3: 752247210
-      fulldustbox-Sheet_4: 1778960813
+      maru-Sheet_0: -927056091
+      maru-Sheet_1: -816657059
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
