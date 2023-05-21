@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c3225a07a5aab4cdc8adaddb0c5c5407
+guid: d5369b10b293046b58645109dd353150
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Botton_Kick-Sheet_0
+      name: Botton_Kick-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f87941017839046deb2cd5a47b0c9086
-      internalID: -1597015051
+      spriteID: 2ca31f3e60f5d4f8b9a60987c8923487
+      internalID: 958982727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Botton_Kick-Sheet_1
+      name: Botton_Kick-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -164,8 +164,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df16c8887375f4e999e05829962e5964
-      internalID: 1230052138
+      spriteID: ac2120d00349243729d782ece16d04de
+      internalID: 2007629926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Botton_Kick-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9787201d0fe44fdb9219f7b7d1175f
+      internalID: -522608015
       vertices: []
       indices: 
       edges: []
@@ -181,8 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Botton_Kick-Sheet_1: 1230052138
-      Botton_Kick-Sheet_0: -1597015051
+      Botton_Kick-Sheet 1_0: 958982727
+      Botton_Kick-Sheet 1_1: 2007629926
+      Botton_Kick-Sheet 1_2: -522608015
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

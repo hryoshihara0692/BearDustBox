@@ -77,20 +77,20 @@ public class GameController : MonoBehaviour
                 //右3だったら
                 if (preX == 2.45f)
                 {
-                    dustBox.DOMove(right2, 0.5f);
+                    dustBox.DOMove(right2, 0.25f);
                     dustBox.localScale = new Vector3(dustBox.localScale.x + 0.5f, dustBox.localScale.y + 0.5f, 1);
                 }
                 //右2だったら
                 else if (preX == 1.8f)
                 //if (preX == 1.8f)
                 {
-                    dustBox.DOMove(right1, 0.5f);
+                    dustBox.DOMove(right1, 0.25f);
                     dustBox.localScale = new Vector3(dustBox.localScale.x + 0.5f, dustBox.localScale.y + 0.5f, 1);
                 }
                 //右1だったら
                 else if (preX == 1)
                 {
-                    dustBox.DOMove(center, 0.5f);
+                    dustBox.DOMove(center, 0.25f);
                     dustBox.localScale = new Vector3(dustBox.localScale.x + 0.5f, dustBox.localScale.y + 0.5f, 1);
 
                     //どのゴミ箱かを保持する（＋コマンドチェック用の配列準備）
@@ -105,7 +105,7 @@ public class GameController : MonoBehaviour
                     //ゴミ箱の名前を変更
                     dustBox.name = "LeftDustBox" + preX.ToString();
 
-                    dustBox.DOMove(left1, 0.5f);
+                    dustBox.DOMove(left1, 0.25f);
                     dustBox.localScale = new Vector3(dustBox.localScale.x - 0.5f, dustBox.localScale.y - 0.5f, 1);
                 }
                 //左1だったら
@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour
                     //ゴミ箱の名前を変更
                     dustBox.name = "LeftDustBox" + preX.ToString();
 
-                    dustBox.DOMove(left2, 0.5f);
+                    dustBox.DOMove(left2, 0.25f);
                     dustBox.localScale = new Vector3(dustBox.localScale.x - 0.5f, dustBox.localScale.y - 0.5f, 1);
                 }
                 //左2だったら
@@ -123,7 +123,7 @@ public class GameController : MonoBehaviour
                     //ゴミ箱の名前を変更
                     dustBox.name = "LeftDustBox" + preX.ToString();
 
-                    dustBox.DOMove(left3, 0.5f);
+                    dustBox.DOMove(left3, 0.25f);
                     dustBox.localScale = new Vector3(dustBox.localScale.x - 0.5f, dustBox.localScale.y - 0.5f, 1);
                 }
 
@@ -180,15 +180,34 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        NextDustBox();
-
-        yield return new WaitForSeconds(0.5f);
+        UIController.instance.three.SetActive(true);
 
         NextDustBox();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
+
+        UIController.instance.three.SetActive(false);
+        UIController.instance.two.SetActive(true);
 
         NextDustBox();
+
+        yield return new WaitForSeconds(1.0f);
+
+        UIController.instance.two.SetActive(false);
+        UIController.instance.one.SetActive(true);
+
+        NextDustBox();
+
+        yield return new WaitForSeconds(1.0f);
+
+        UIController.instance.one.SetActive(false);
+        UIController.instance.startText.SetActive(true);
+
+        yield return new WaitForSeconds(1.0f);
+
+        UIController.instance.startText.SetActive(false);
+        UIController.instance.startFlag = true;
+
 
     }
 

@@ -78,6 +78,9 @@ public class AnimationController : MonoBehaviour
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
 
+        //カメラを揺らす
+        UIController.instance.Shake();
+
         //TODO NG処理はいずれまとめよう
         GameController.instance.NextDustBox();
     }
@@ -90,6 +93,9 @@ public class AnimationController : MonoBehaviour
 
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(bearAttack, new Vector3(0f, 0f, 0f), Quaternion.identity);
+
+        //カメラを揺らす
+        UIController.instance.Shake();
 
         //TODO NG処理はいずれまとめよう
         GameController.instance.NextDustBox();

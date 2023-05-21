@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d35db62e15144a2a88f6043fab9c32b
+guid: f6d96a7b3ef0f40398b187bbfa517a5f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Botton_PickUp-Sheet_0
+      name: Botton_Hiraku-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91f49c52f5bba4abc84ffd3b2a618f88
-      internalID: 549903204
+      spriteID: 2507a98f2584846819084bc109b9a56f
+      internalID: 1653759717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Botton_PickUp-Sheet_1
+      name: Botton_Hiraku-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -164,8 +164,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca4f340dcfac8450eb33295c2f7edd3a
-      internalID: 1074125332
+      spriteID: aacdb633abd6d405d8c954510f65b6ae
+      internalID: -2060520127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Botton_Hiraku-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9ef450a8c194121add8125dceea1c7
+      internalID: -1667201570
       vertices: []
       indices: 
       edges: []
@@ -181,8 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Botton_PickUp-Sheet_1: 1074125332
-      Botton_PickUp-Sheet_0: 549903204
+      Botton_Hiraku-Sheet 1_1: -2060520127
+      Botton_Hiraku-Sheet 1_0: 1653759717
+      Botton_Hiraku-Sheet 1_2: -1667201570
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

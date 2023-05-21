@@ -143,6 +143,9 @@ public class AttackController : MonoBehaviour
 
                 //スコアに+1点
                 UIController.instance.addScore(1);
+
+                //カウントダウンタイマーに+1秒
+                UIController.instance.addCountdown(1);
             }
         }
         //不正解だったら
@@ -153,6 +156,9 @@ public class AttackController : MonoBehaviour
 
             //ボタン非活性化
             StartCoroutine("NotInteractable");
+
+            //カメラを揺らす
+            UIController.instance.Shake();
 
             if (nowDustBoxName.Contains("Bomb"))
             {
