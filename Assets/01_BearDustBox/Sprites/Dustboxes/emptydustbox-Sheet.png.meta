@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24ecf454af0a94a3d91b0bea00600a14
+guid: 1409a6ef4ea2642aab275ee33f617dc5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,190 +129,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: beardustbox-Sheet_0
+      name: emptydustbox-Sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 95
-        width: 84
-        height: 117
+        x: 0
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0e7768e39dd34af2a8dd648af3a1cc0
-      internalID: -468680035
+      spriteID: a53a4b43c5cdd4105912fc64048f59fd
+      internalID: -1682678713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: beardustbox-Sheet_1
+      name: emptydustbox-Sheet_1
       rect:
         serializedVersion: 2
-        x: 148
-        y: 96
-        width: 84
-        height: 117
+        x: 96
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7876fe7e116e424eb8334619ec2f955
-      internalID: 1472904557
+      spriteID: 18ae3ef430e1a4f57961a990c36723d0
+      internalID: 92823569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: beardustbox-Sheet_2
+      name: emptydustbox-Sheet_2
       rect:
         serializedVersion: 2
-        x: 275
-        y: 96
-        width: 84
-        height: 117
+        x: 192
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15ad0da957e9842f086afe3da5f14181
-      internalID: 1154905842
+      spriteID: 371e7deeb54d342f8bb1477fbbf5e024
+      internalID: -2075773329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: beardustbox-Sheet_3
+      name: emptydustbox-Sheet_3
       rect:
         serializedVersion: 2
-        x: 404
-        y: 96
-        width: 84
-        height: 117
+        x: 288
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd311e6575fc043e781191b45909c338
-      internalID: -266229171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: beardustbox-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 96
-        width: 84
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4ca2e1227e724b2d94cb612390917e6
-      internalID: 1285801639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: beardustbox-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 661
-        y: 96
-        width: 84
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c940f7163e9ef4fa3a2c65e2184aeb0b
-      internalID: -1867744031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: beardustbox-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 96
-        width: 87
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 316d6b0cda5d540e3bd64e797b40e1cb
-      internalID: 476872218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: beardustbox-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 915
-        y: 95
-        width: 87
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82744b93d3f80482ab584e8f162aa188
-      internalID: 1863920366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: beardustbox-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 1042
-        y: 96
-        width: 87
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2f777353970b446d90aff5b9909082a
-      internalID: 137153663
+      spriteID: 86502028843484d07ad1292e15ca5188
+      internalID: -1590436182
       vertices: []
       indices: 
       edges: []
@@ -328,15 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      beardustbox-Sheet_0: -468680035
-      beardustbox-Sheet_3: -266229171
-      beardustbox-Sheet_1: 1472904557
-      beardustbox-Sheet_5: -1867744031
-      beardustbox-Sheet_7: 1863920366
-      beardustbox-Sheet_8: 137153663
-      beardustbox-Sheet_4: 1285801639
-      beardustbox-Sheet_6: 476872218
-      beardustbox-Sheet_2: 1154905842
+      emptydustbox-Sheet_1: 92823569
+      emptydustbox-Sheet_3: -1590436182
+      emptydustbox-Sheet_2: -2075773329
+      emptydustbox-Sheet_0: -1682678713
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

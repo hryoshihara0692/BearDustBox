@@ -16,6 +16,8 @@ public class AnimationController : MonoBehaviour
     //クマ攻撃アニメーションゲームオブジェクト
     public GameObject bearAttack;
 
+    public GameObject bad;
+
     //ゴミ箱終了フラグ
     private bool finishFlag = false;
 
@@ -77,6 +79,7 @@ public class AnimationController : MonoBehaviour
 
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
 
         //カメラを揺らす
         UIController.instance.Shake();
@@ -93,6 +96,7 @@ public class AnimationController : MonoBehaviour
 
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(bearAttack, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
 
         //カメラを揺らす
         UIController.instance.Shake();

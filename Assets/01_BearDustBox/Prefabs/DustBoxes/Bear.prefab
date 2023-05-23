@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -468680035, guid: 24ecf454af0a94a3d91b0bea00600a14, type: 3}
+  m_Sprite: {fileID: -1666371928, guid: e8b99505ee806414c826534d0da88fd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 0}
   bearAttack: {fileID: 3954566727978194339, guid: 914db655a607f46179b552ac4dd526f2, type: 3}
+  bad: {fileID: 4454205284026923141, guid: 079cf1d84747646b99c3ada3625f4f1f, type: 3}
 --- !u!114 &8994866659303234064
 MonoBehaviour:
   m_ObjectHideFlags: 0

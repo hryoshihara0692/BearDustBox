@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class GameController : MonoBehaviour
@@ -30,6 +31,10 @@ public class GameController : MonoBehaviour
 
     private bool movingFlag = false;
 
+    public Button openButton;
+    public Button closeButton;
+    public Button kickButton;
+    public Button pickUpButton;
 
     private void Awake()
     {
@@ -176,6 +181,10 @@ public class GameController : MonoBehaviour
 
     private IEnumerator InstantiateToReady()
     {
+        openButton.interactable = false;
+        closeButton.interactable = false;
+        kickButton.interactable = false;
+        pickUpButton.interactable = false;
         NextDustBox();
 
         yield return new WaitForSeconds(0.5f);
@@ -208,6 +217,10 @@ public class GameController : MonoBehaviour
         UIController.instance.startText.SetActive(false);
         UIController.instance.startFlag = true;
 
+        openButton.interactable = true;
+        closeButton.interactable = true;
+        kickButton.interactable = true;
+        pickUpButton.interactable = true;
 
     }
 

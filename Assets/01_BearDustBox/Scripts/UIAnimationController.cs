@@ -8,9 +8,11 @@ public class UIAnimationController : MonoBehaviour
 
     //正解アニメーションゲームオブジェクト
     public GameObject maru;
+    public GameObject good;
 
     //不正解アニメーションゲームオブジェクト
     public GameObject batsu;
+    public GameObject bad;
 
     //爆発アニメーションゲームオブジェクト
     public GameObject explosion;
@@ -47,18 +49,20 @@ public class UIAnimationController : MonoBehaviour
     public void Maru()
     {
         Instantiate(maru, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Instantiate(good, new Vector3(1f, 1f, 0f), Quaternion.identity);
     }
 
     public void Batsu()
     {
         Instantiate(batsu, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
     }
 
     public void Explosion()
     {
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
-
+        Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
 
     }
 

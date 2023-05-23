@@ -20,7 +20,7 @@ public class MainMenuController : MonoBehaviour
     //ボタンからモードを取得してゲームを開始する
     public void GameStart(string modeName)
     {
-        if(modeName == "Speed")
+        if(modeName == "Normal")
         {
             SceneManager.LoadScene("GameScene");
         }

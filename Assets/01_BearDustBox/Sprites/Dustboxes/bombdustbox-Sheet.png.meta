@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a643b28aeda24a6e819174bda69d8c9
+guid: e2f902239d2db4ba997afe3128650192
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bombdustbox-Sheet 1_2
+      name: bombdustbox-Sheet_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 96
-        width: 87
-        height: 117
+        x: 0
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de5ac8ca7bd554874bd07f7c23c87a18
-      internalID: 1160452696
+      spriteID: 6768ca24a6c9849e5bcfbad9912e9fdb
+      internalID: -1927030044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet 1_3
+      name: bombdustbox-Sheet_1
       rect:
         serializedVersion: 2
-        x: 146
-        y: 96
-        width: 87
-        height: 117
+        x: 96
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4566caa86aed34e0abc9a0beeb4f9b21
-      internalID: 208504190
+      spriteID: c699e1a8b68684971a7b9d32cba4ab8a
+      internalID: -180050626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet 1_5
+      name: bombdustbox-Sheet_2
       rect:
         serializedVersion: 2
-        x: 274
-        y: 96
-        width: 87
-        height: 117
+        x: 192
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17ec831f419ad46fe8f0e5d65c406810
-      internalID: 694184218
+      spriteID: 6211d5c30c5f142489f7481e39816424
+      internalID: 1927904741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet 1_7
+      name: bombdustbox-Sheet_3
       rect:
         serializedVersion: 2
-        x: 402
-        y: 96
-        width: 87
-        height: 117
+        x: 288
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afc55663ba886443d9da9150052c3204
-      internalID: 807888424
+      spriteID: abd242b95c3f04012a03a1fcebc21e77
+      internalID: -119736469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet 1_9
+      name: bombdustbox-Sheet_4
       rect:
         serializedVersion: 2
-        x: 530
-        y: 96
-        width: 87
-        height: 117
+        x: 384
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 778486ea96e3044bc961321eb4de7bb0
-      internalID: 167838693
+      spriteID: 180c7956ab1004c44942085e06792e7d
+      internalID: 1311186995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet 1_11
+      name: bombdustbox-Sheet_5
       rect:
         serializedVersion: 2
-        x: 658
-        y: 96
-        width: 87
-        height: 117
+        x: 480
+        y: 0
+        width: 96
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,8 +248,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b2268355b66140209d889d19714ffcf
-      internalID: -2137078876
+      spriteID: ada5d334c59a94d6fa350802a313fe3c
+      internalID: 1921295679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bombdustbox-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443e53f192bf74758aa08aef49831ac3
+      internalID: -989443767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bombdustbox-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e4b099f493f453e8aece3b29235a53
+      internalID: -1683566208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bombdustbox-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef656d73a8c6f4e069681dd0899ba18f
+      internalID: 1063969658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bombdustbox-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e319eddf6032497b9bac440c5c3d243
+      internalID: -1096118264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bombdustbox-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5eb2c2958e640ebb1ab2808a2327e0
+      internalID: 1455274408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bombdustbox-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c57f408c84c46169c7279728c3d326
+      internalID: -1243188369
       vertices: []
       indices: 
       edges: []
@@ -265,21 +391,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bombdustbox-Sheet 1_0: -440520147
-      bombdustbox-Sheet 1_1: 1770784548
-      bombdustbox-Sheet 1_6: 1684974094
-      bombdustbox-Sheet 1_5: 694184218
-      bombdustbox-Sheet 1_3: 208504190
-      bombdustbox-Sheet 1_2: 1160452696
-      bombdustbox-Sheet 1_9: 167838693
-      bombdustbox-Sheet 1_13: 365910313
-      bombdustbox-Sheet 1_14: -451874484
-      bombdustbox-Sheet 1_11: -2137078876
-      bombdustbox-Sheet 1_10: -1977293639
-      bombdustbox-Sheet 1_7: 807888424
-      bombdustbox-Sheet 1_8: 857958754
-      bombdustbox-Sheet 1_4: 453018152
-      bombdustbox-Sheet 1_12: -729973626
+      bombdustbox-Sheet_2: 1927904741
+      bombdustbox-Sheet_8: 1063969658
+      bombdustbox-Sheet_4: 1311186995
+      bombdustbox-Sheet_6: -989443767
+      bombdustbox-Sheet_3: -119736469
+      bombdustbox-Sheet_1: -180050626
+      bombdustbox-Sheet_10: 1455274408
+      bombdustbox-Sheet_7: -1683566208
+      bombdustbox-Sheet_11: -1243188369
+      bombdustbox-Sheet_0: -1927030044
+      bombdustbox-Sheet_5: 1921295679
+      bombdustbox-Sheet_9: -1096118264
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

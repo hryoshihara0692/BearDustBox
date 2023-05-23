@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 752483c7021af4da9a1ac7f285f82091
+guid: caaf7b9402ad1445c93ba8285e4b8f12
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -127,91 +127,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: dustbox_0
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 96
-        width: 87
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: daa0c1792f9da46aabec657df5c43d30
-      internalID: -751957666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dustbox_1
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 96
-        width: 87
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b44989ac87f7c40a48146a53a0a2ee26
-      internalID: -1762601975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dustbox_2
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 96
-        width: 87
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81e6f2a62009c4ad784ac9ed5923eac6
-      internalID: 1024017380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dustbox_3
-      rect:
-        serializedVersion: 2
-        x: 403
-        y: 96
-        width: 86
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c5322305ed7f45b694d63fe9b1b6e9e
-      internalID: 1431367346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -222,11 +138,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      dustbox_1: -1762601975
-      dustbox_3: 1431367346
-      dustbox_0: -751957666
-      dustbox_2: 1024017380
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
