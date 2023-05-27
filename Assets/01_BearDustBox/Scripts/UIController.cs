@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour
     private int scoreNum = 0;
 
     //カウントダウン
-    private float countdown = 30.0f;
+    public float countdown = 30.0f;
 
     //時間を表示するText型の変数
     public TextMeshProUGUI timerText;
@@ -59,6 +59,8 @@ public class UIController : MonoBehaviour
         three.SetActive(false);
         two.SetActive(false);
         one.SetActive(false);
+
+        //ES3.DeleteKey("DustBox_SUM");
     }
 
     // Update is called once per frame
@@ -79,7 +81,15 @@ public class UIController : MonoBehaviour
             if (countdown <= 0)
             {
                 timerText.text = "Finish!!";
-                //SceneManager.LoadScene("ResultScene");
+
+                Debug.Log("UIControllerのscoreNum");
+                Debug.Log(scoreNum);
+
+                ES3.Save<int>("DustBox_Score", scoreNum);
+
+                SceneManager.LoadScene("ResultScene");
+
+                startFlag = false;
             }
         }
     }

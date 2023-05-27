@@ -36,6 +36,9 @@ public class GameController : MonoBehaviour
     public Button kickButton;
     public Button pickUpButton;
 
+    private AudioSource audioSource;
+    public AudioClip countdown;
+
     private void Awake()
     {
         if (instance == null)
@@ -52,6 +55,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         StartCoroutine("InstantiateToReady");
     }
 
@@ -189,12 +193,14 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        audioSource.Play();
         UIController.instance.three.SetActive(true);
 
         NextDustBox();
 
         yield return new WaitForSeconds(1.0f);
 
+        audioSource.Play();
         UIController.instance.three.SetActive(false);
         UIController.instance.two.SetActive(true);
 
@@ -202,6 +208,7 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
 
+        audioSource.Play();
         UIController.instance.two.SetActive(false);
         UIController.instance.one.SetActive(true);
 

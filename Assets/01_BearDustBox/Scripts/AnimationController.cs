@@ -21,10 +21,15 @@ public class AnimationController : MonoBehaviour
     //ゴミ箱終了フラグ
     private bool finishFlag = false;
 
+    AudioSource audioSource;
+    public AudioClip explosionClip;
+    public AudioClip bearAttackClip;
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -77,6 +82,9 @@ public class AnimationController : MonoBehaviour
         //爆発＝NGなのでnowCountを0にする
         AttackController.instance.nowCount = 0;
 
+        audioSource.clip = explosionClip;
+        audioSource.Play();
+
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
         Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
@@ -94,7 +102,10 @@ public class AnimationController : MonoBehaviour
         //くま攻撃＝NGなのでnowCountを0にする
         AttackController.instance.nowCount = 0;
 
-        //爆発アニメーションゲームオブジェクトの生成
+        audioSource.clip = bearAttackClip;
+        audioSource.Play();
+
+        //熊の攻撃アニメーションゲームオブジェクトの生成
         Instantiate(bearAttack, new Vector3(0f, 0f, 0f), Quaternion.identity);
         Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
 

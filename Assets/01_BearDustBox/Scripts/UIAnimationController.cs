@@ -21,6 +21,11 @@ public class UIAnimationController : MonoBehaviour
 
     public GameObject footKickImpact;
 
+    AudioSource audioSource;
+    public AudioClip maruClip;
+    public AudioClip batsuClip;
+    public AudioClip explosionClip;
+
     private void Awake()
     {
         if (instance == null)
@@ -37,7 +42,7 @@ public class UIAnimationController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,18 +53,25 @@ public class UIAnimationController : MonoBehaviour
 
     public void Maru()
     {
+        audioSource.clip = maruClip;
+        audioSource.Play();
         Instantiate(maru, new Vector3(0f, 0f, 0f), Quaternion.identity);
         Instantiate(good, new Vector3(1f, 1f, 0f), Quaternion.identity);
     }
 
     public void Batsu()
     {
+        audioSource.clip = batsuClip;
+        audioSource.Play();
         Instantiate(batsu, new Vector3(0f, 0f, 0f), Quaternion.identity);
         Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
     }
 
     public void Explosion()
     {
+        audioSource.clip = explosionClip;
+        audioSource.Play();
+
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
         Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
