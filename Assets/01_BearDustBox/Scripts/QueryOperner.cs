@@ -18,6 +18,6 @@ public class QueryOperner : MonoBehaviour
 
     public void queryOpen()
     {
-        Application.OpenURL("https://twitter.com/aoyanagi0692");
+        Application.OpenURL("https://forms.gle/tN4Pf6jfogiFSKJu7");
     }
 }

@@ -6,7 +6,14 @@ using UnityEngine.UI;
 
 public class AttackController : MonoBehaviour
 {
-    public static AttackController instance;
+    //public static AttackController instance;
+
+    private static AttackController instance;
+
+    public static AttackController Instance
+    {
+        get { return instance; }
+    }
 
     //チェック中のゴミ箱の種類
     public string nowDustBoxName;
@@ -39,16 +46,29 @@ public class AttackController : MonoBehaviour
     public Button kickButton;
     public Button pickUpButton;
 
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        //Destroy(gameObject);
+    //    }
+    //}
+
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 
@@ -70,7 +90,7 @@ public class AttackController : MonoBehaviour
         nowDustBoxName = dustBoxName;
 
         //空のゴミ箱だったら
-        if(nowDustBoxName.Contains("Empty"))
+        if(nowDustBoxName == "Empty")
         {
             //複製する配列の長さで初期化
             nowDustBoxCommand = new string[emptyDustBoxCommand.Length];
@@ -78,7 +98,7 @@ public class AttackController : MonoBehaviour
             //チェック中のゴミ箱コマンド配列に、空のゴミ箱コマンド配列を複製
             Array.Copy(emptyDustBoxCommand, nowDustBoxCommand, emptyDustBoxCommand.Length);
         }
-        else if(nowDustBoxName.Contains("Full"))
+        else if(nowDustBoxName == "Full")
         {
             //複製する配列の長さで初期化
             nowDustBoxCommand = new string[fullDustBoxCommand.Length];
@@ -86,7 +106,7 @@ public class AttackController : MonoBehaviour
             //チェック中のゴミ箱コマンド配列に、空のゴミ箱コマンド配列を複製
             Array.Copy(fullDustBoxCommand, nowDustBoxCommand, fullDustBoxCommand.Length);
         }
-        else if(nowDustBoxName.Contains("Bear"))
+        else if(nowDustBoxName == "Bear")
         {
             //複製する配列の長さで初期化
             nowDustBoxCommand = new string[bearDustBoxCommand.Length];
@@ -94,7 +114,7 @@ public class AttackController : MonoBehaviour
             //チェック中のゴミ箱コマンド配列に、空のゴミ箱コマンド配列を複製
             Array.Copy(bearDustBoxCommand, nowDustBoxCommand, bearDustBoxCommand.Length);
         }
-        else if(nowDustBoxName.Contains("Bomb"))
+        else if(nowDustBoxName == "Bomb")
         {
             //複製する配列の長さで初期化
             nowDustBoxCommand = new string[bombDustBoxCommand.Length];
@@ -114,7 +134,7 @@ public class AttackController : MonoBehaviour
 
         if(action == "Kick")
         {
-            UIAnimationController.instance.FootKick();
+            UIAnimationController.Instance.FootKick();
 
             //centerDustBox = GameObject.Find("CenterDustBox");
             //Animator animator_tmp = centerDustBox.GetComponent<Animator>();
@@ -126,6 +146,7 @@ public class AttackController : MonoBehaviour
         //正解だったら
         if (correctCommand == action)
         {
+
             //チェック中の配列番号を+1
             nowCount++;
             animationCount++;
@@ -133,52 +154,102 @@ public class AttackController : MonoBehaviour
             //チェック中の配列番号が、配列の要素総数を超えていたら次のゴミ箱へ
             if(nowCount == nowDustBoxCommand.Length)
             {
-                UIAnimationController.instance.Maru();
+                //Debug.Log(nowDustBoxName);
+
+                if(nowDustBoxName == "Empty")
+                {
+                    //Debug.Log("からです");
+                    GameController.Instance.addEmptyDustBox(1);
+                }
+                else if(nowDustBoxName == "Full")
+                {
+                    //Debug.Log("ごみいっぱい");
+                    GameController.Instance.addFullDustBox(1);
+                }
+                else if(nowDustBoxName == "Bear")
+                {
+                    //Debug.Log("くまだ！！");
+                    GameController.Instance.addBearDustBox(1);
+                }
+                else if(nowDustBoxName == "Bomb")
+                {
+                    //Debug.Log("爆弾");
+                    GameController.Instance.addBombDustBox(1);
+                }
+
+                GameController.Instance.addMaru(1);
+
+                //ボタン非活性化
+                StartCoroutine("OKNotInteractable");
+
+                UIAnimationController.Instance.Maru();
+
+                //次のゴミ箱へ
+                GameController.Instance.NextDustBox(0.25f);
+
+                //スコアに+1点
+                UIController.Instance.addScore(1);
+
+                //カウントダウンタイマーに+1秒
+                //UIController.Instance.addCountdown(1);
 
                 //チェック中の配列番号を初期化
                 nowCount = 0;
-
-                //次のゴミ箱へ
-                GameController.instance.NextDustBox();
-
-                //スコアに+1点
-                UIController.instance.addScore(1);
-
-                //カウントダウンタイマーに+1秒
-                UIController.instance.addCountdown(1);
             }
         }
         //不正解だったら
         else
         {
+            //Debug.Log("不正解");
+
             //失敗エフェクト用にカウントに-1代入
-            //animationCount = -1;
+            animationCount = -1;
 
             //ボタン非活性化
-            StartCoroutine("NotInteractable");
+            StartCoroutine("NGNotInteractable");
 
             //カメラを揺らす
-            UIController.instance.Shake();
+            UIController.Instance.Shake();
 
             if (nowDustBoxName.Contains("Bomb"))
             {
-                UIAnimationController.instance.Explosion();
+                UIAnimationController.Instance.Explosion();
             }
             else
             {
-                UIAnimationController.instance.Batsu();
+                UIAnimationController.Instance.Batsu();
             }
-            
+
+            GameController.Instance.addBatsu(1);
+
+            //カウントダウンタイマーを-1秒
+            UIController.Instance.addCountdown(-1);
+
             //チェック中の配列番号を初期化
             nowCount = 0;
+            //nowCount = -1;
 
             //次のゴミ箱へ
-            GameController.instance.NextDustBox();
+            GameController.Instance.NextDustBox(0.5f);
         }
     }
 
+    private IEnumerator OKNotInteractable()
+    {
+        openButton.interactable = false;
+        closeButton.interactable = false;
+        kickButton.interactable = false;
+        pickUpButton.interactable = false;
 
-    private IEnumerator NotInteractable()
+        yield return new WaitForSeconds(0.25f);
+
+        openButton.interactable = true;
+        closeButton.interactable = true;
+        kickButton.interactable = true;
+        pickUpButton.interactable = true;
+    }
+
+    private IEnumerator NGNotInteractable()
     {
         openButton.interactable = false;
         closeButton.interactable = false;

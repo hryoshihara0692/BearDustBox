@@ -8,20 +8,40 @@ public class SEManager : MonoBehaviour
     private AudioSource audioSourceSE;
     public AudioClip se;
 
+    //public static SEManager Instance
+    //{
+    //    get; private set;
+    //}
+
+    private static SEManager instance;
+
     public static SEManager Instance
     {
-        get; private set;
+        get { return instance; }
     }
 
-    void Awake()
+    //void Awake()
+    //{
+    //    if (Instance != null)
+    //    {
+    //        Destroy(gameObject);
+    //        return;
+    //    }
+    //    Instance = this;
+    //    DontDestroyOnLoad(gameObject);
+    //}
+
+    private void Awake()
     {
-        if (Instance != null)
+        if (instance != null && instance != this)
         {
-            Destroy(gameObject);
-            return;
+            Destroy(this.gameObject);
         }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     private void Start()

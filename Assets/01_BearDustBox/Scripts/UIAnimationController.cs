@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class UIAnimationController : MonoBehaviour
 {
-    public static UIAnimationController instance;
+    //public static UIAnimationController instance;
+
+    private static UIAnimationController instance;
+
+    public static UIAnimationController Instance
+    {
+        get { return instance; }
+    }
 
     //正解アニメーションゲームオブジェクト
     public GameObject maru;
@@ -26,16 +33,29 @@ public class UIAnimationController : MonoBehaviour
     public AudioClip batsuClip;
     public AudioClip explosionClip;
 
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        //Destroy(gameObject);
+    //    }
+    //}
+
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 
@@ -75,6 +95,7 @@ public class UIAnimationController : MonoBehaviour
         //爆発アニメーションゲームオブジェクトの生成
         Instantiate(explosion, new Vector3(0f, 0f, 0f), Quaternion.identity);
         Instantiate(bad, new Vector3(-1f, 1f, 0f), Quaternion.identity);
+        Instantiate(batsu, new Vector3(0f, 0f, 0f), Quaternion.identity);
 
     }
 

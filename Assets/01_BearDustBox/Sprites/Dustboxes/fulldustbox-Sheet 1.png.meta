@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e2f902239d2db4ba997afe3128650192
+guid: 293df67fed8664fb6bd4e75ef24f0e9f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bombdustbox-Sheet_0
+      name: fulldustbox-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6768ca24a6c9849e5bcfbad9912e9fdb
-      internalID: -1927030044
+      spriteID: e0342ac730be04fcc964dfc435c71d2f
+      internalID: -1860437350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_1
+      name: fulldustbox-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 96
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c699e1a8b68684971a7b9d32cba4ab8a
-      internalID: -180050626
+      spriteID: 88b70dbba8ecf4c888b3f34e92a54e06
+      internalID: 384079843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_2
+      name: fulldustbox-Sheet 1_2
       rect:
         serializedVersion: 2
         x: 192
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6211d5c30c5f142489f7481e39816424
-      internalID: 1927904741
+      spriteID: 1f3f84664b684403892c7ebfcf0d349d
+      internalID: 890798837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_3
+      name: fulldustbox-Sheet 1_3
       rect:
         serializedVersion: 2
         x: 288
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abd242b95c3f04012a03a1fcebc21e77
-      internalID: -119736469
+      spriteID: e060632b4d4d84d949116d49dab8fac2
+      internalID: -1140356549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_4
+      name: fulldustbox-Sheet 1_4
       rect:
         serializedVersion: 2
         x: 384
@@ -227,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 180c7956ab1004c44942085e06792e7d
-      internalID: 1311186995
+      spriteID: 3b1537532ace74a049323493ad0f8e36
+      internalID: -1117286853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_5
+      name: fulldustbox-Sheet 1_5
       rect:
         serializedVersion: 2
         x: 480
@@ -248,14 +248,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada5d334c59a94d6fa350802a313fe3c
-      internalID: 1921295679
+      spriteID: ee407406e6c1541b1a7c7f2e0cd0a011
+      internalID: 307796773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_6
+      name: fulldustbox-Sheet 1_6
       rect:
         serializedVersion: 2
         x: 576
@@ -269,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 443e53f192bf74758aa08aef49831ac3
-      internalID: -989443767
+      spriteID: 985b07ba33b0c4117923d25ad312a80c
+      internalID: 1103452152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_7
+      name: fulldustbox-Sheet 1_7
       rect:
         serializedVersion: 2
         x: 672
@@ -290,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75e4b099f493f453e8aece3b29235a53
-      internalID: -1683566208
+      spriteID: b9058e41d5e0f44bb8deb8f785c01ebb
+      internalID: -133289851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_8
+      name: fulldustbox-Sheet 1_8
       rect:
         serializedVersion: 2
         x: 768
@@ -311,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef656d73a8c6f4e069681dd0899ba18f
-      internalID: 1063969658
+      spriteID: cc036ff4ad4ae4cbdaa323def6749834
+      internalID: 942638568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_9
+      name: fulldustbox-Sheet 1_9
       rect:
         serializedVersion: 2
         x: 864
@@ -332,14 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e319eddf6032497b9bac440c5c3d243
-      internalID: -1096118264
+      spriteID: 34b59f07a125d45fe887027ebee71295
+      internalID: -353661056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_10
+      name: fulldustbox-Sheet 1_10
       rect:
         serializedVersion: 2
         x: 960
@@ -353,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b5eb2c2958e640ebb1ab2808a2327e0
-      internalID: 1455274408
+      spriteID: 07246a034ab434931a40f1baa813ef9c
+      internalID: -808041621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bombdustbox-Sheet_11
+      name: fulldustbox-Sheet 1_11
       rect:
         serializedVersion: 2
         x: 1056
@@ -374,8 +374,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70c57f408c84c46169c7279728c3d326
-      internalID: -1243188369
+      spriteID: d8805638d3517474ca6d7260db269839
+      internalID: -138285387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fulldustbox-Sheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaa419f57cb74aa3a5bc69e51d6a3dc
+      internalID: -1969089419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fulldustbox-Sheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f31e61cce5f4f1ea7f57c154d29383
+      internalID: -394628025
       vertices: []
       indices: 
       edges: []
@@ -391,18 +433,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bombdustbox-Sheet_2: 1927904741
-      bombdustbox-Sheet_8: 1063969658
-      bombdustbox-Sheet_4: 1311186995
-      bombdustbox-Sheet_6: -989443767
-      bombdustbox-Sheet_3: -119736469
-      bombdustbox-Sheet_1: -180050626
-      bombdustbox-Sheet_10: 1455274408
-      bombdustbox-Sheet_7: -1683566208
-      bombdustbox-Sheet_11: -1243188369
-      bombdustbox-Sheet_0: -1927030044
-      bombdustbox-Sheet_5: 1921295679
-      bombdustbox-Sheet_9: -1096118264
+      fulldustbox-Sheet 1_4: -1117286853
+      fulldustbox-Sheet 1_12: -1969089419
+      fulldustbox-Sheet 1_0: -1860437350
+      fulldustbox-Sheet 1_3: -1140356549
+      fulldustbox-Sheet 1_2: 890798837
+      fulldustbox-Sheet 1_8: 942638568
+      fulldustbox-Sheet 1_6: 1103452152
+      fulldustbox-Sheet 1_7: -133289851
+      fulldustbox-Sheet 1_1: 384079843
+      fulldustbox-Sheet 1_13: -394628025
+      fulldustbox-Sheet 1_11: -138285387
+      fulldustbox-Sheet 1_9: -353661056
+      fulldustbox-Sheet 1_5: 307796773
+      fulldustbox-Sheet 1_10: -808041621
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

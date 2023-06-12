@@ -8,7 +8,14 @@ using DG.Tweening;
 
 public class UIController : MonoBehaviour
 {
-    public static UIController instance;
+    //public static UIController instance;
+
+    private static UIController instance;
+
+    public static UIController Instance
+    {
+        get { return instance; }
+    }
 
     public bool startFlag = false;
 
@@ -39,16 +46,41 @@ public class UIController : MonoBehaviour
     public GameObject two;
     public GameObject one;
 
+    public GameObject finishText;
+
+    public LoadingScene loadingScene;
+
+    public Button openButton;
+    public Button closeButton;
+    public Button kickButton;
+    public Button pickUpButton;
+
+    private AudioSource audioSource;
+    public AudioClip endGame;
+
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        //Destroy(gameObject);
+    //    }
+    //}
+
     private void Awake()
     {
-        if (instance == null)
+        if (instance != null && instance != this)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(this.gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 
@@ -59,6 +91,8 @@ public class UIController : MonoBehaviour
         three.SetActive(false);
         two.SetActive(false);
         one.SetActive(false);
+
+        audioSource = gameObject.GetComponent<AudioSource>();
 
         //ES3.DeleteKey("DustBox_SUM");
     }
@@ -77,17 +111,38 @@ public class UIController : MonoBehaviour
             //スライダーにカウントダウンを反映する
             slider.value = countdown;
 
+            if(5 < countdown && countdown < 10)
+            {
+                BGMController.Instance.SetPitch(1.2f);
+            }
+            else if (countdown < 5)
+            {
+                BGMController.Instance.SetPitch(1.5f);
+            }
+            //else if(countdown < 3)
+            //{
+            //    BGMController.Instance.SetPitch(1.75f);
+            //}
+
             //countdownが0以下になったとき
             if (countdown <= 0)
             {
-                timerText.text = "Finish!!";
+                openButton.interactable = false;
+                closeButton.interactable = false;
+                kickButton.interactable = false;
+                pickUpButton.interactable = false;
 
-                Debug.Log("UIControllerのscoreNum");
-                Debug.Log(scoreNum);
+                //Time.timeScale = 0f;
 
-                ES3.Save<int>("DustBox_Score", scoreNum);
+                //Debug.Log("a");
+                audioSource.Play();
 
-                SceneManager.LoadScene("ResultScene");
+                //timerText.text = "Finish!!";
+                finishText.SetActive(true);
+
+                BGMController.Instance.BGMStop();
+
+                StartCoroutine("FinishEnumerator");
 
                 startFlag = false;
             }
@@ -113,5 +168,109 @@ public class UIController : MonoBehaviour
     {
         mainCamera.transform.DOShakePosition(
             duration, strength, vibrato, randomness, snapping, fadeOut);
+    }
+
+    private IEnumerator FinishEnumerator()
+    {
+        //TODO 音鳴らす
+        //Debug.Log("kokokiteru");
+
+        yield return new WaitForSeconds(1f);
+
+        //Debug.Log("kokoha");
+
+        ES3.Save<int>("DustBox_Score", scoreNum);
+
+        //セーブデータにマルの数があれば
+        if (ES3.KeyExists("Maru_Sum"))
+        {
+            int preMaruSum = ES3.Load<int>("Maru_Sum");
+            ES3.Save<int>("Maru_Sum", preMaruSum + GameController.Instance.getMaru());
+        }
+        //なかったらそのままセーブ
+        else
+        {
+            ES3.Save<int>("Maru_Sum", GameController.Instance.getMaru());
+        }
+
+        //セーブデータにバツの数があれば
+        if (ES3.KeyExists("Batsu_Sum"))
+        {
+            int preBatsuSum = ES3.Load<int>("Batsu_Sum");
+            ES3.Save<int>("Batsu_Sum", preBatsuSum + GameController.Instance.getBatsu());
+        }
+        //なかったらそのままセーブ
+        else
+        {
+            ES3.Save<int>("Batsu_Sum", GameController.Instance.getBatsu());
+        }
+
+        //セーブデータに空ごみ箱の数があれば
+        if (ES3.KeyExists("EmptyDustBox_Sum"))
+        {
+            int preEmptyDustBoxSum = ES3.Load<int>("EmptyDustBox_Sum");
+            ES3.Save<int>("EmptyDustBox_Sum", preEmptyDustBoxSum + GameController.Instance.getEmptyDustBox());
+        }
+        //なかったらそのままセーブ
+        else
+        {
+            ES3.Save<int>("EmptyDustBox_Sum", GameController.Instance.getEmptyDustBox());
+        }
+
+        //セーブデータにまんたんごみ箱の数があれば
+        if (ES3.KeyExists("FullDustBox_Sum"))
+        {
+            int preFullDustBoxSum = ES3.Load<int>("FullDustBox_Sum");
+            ES3.Save<int>("FullDustBox_Sum", preFullDustBoxSum + GameController.Instance.getFullDustBox());
+        }
+        //なかったらそのままセーブ
+        else
+        {
+            ES3.Save<int>("FullDustBox_Sum", GameController.Instance.getFullDustBox());
+        }
+
+        //セーブデータにくまのごみ箱の数があれば
+        if (ES3.KeyExists("BearDustBox_Sum"))
+        {
+            int preBearDustBoxSum = ES3.Load<int>("BearDustBox_Sum");
+            ES3.Save<int>("BearDustBox_Sum", preBearDustBoxSum + GameController.Instance.getBearDustBox());
+        }
+        //なかったらそのままセーブ
+        else
+        {
+            ES3.Save<int>("BearDustBox_Sum", GameController.Instance.getBearDustBox());
+        }
+
+        //セーブデータに爆弾のごみ箱の数があれば
+        if (ES3.KeyExists("BombDustBox_Sum"))
+        {
+            int preBombDustBoxSum = ES3.Load<int>("BombDustBox_Sum");
+            ES3.Save<int>("BombDustBox_Sum", preBombDustBoxSum + GameController.Instance.getBombDustBox());
+        }
+        //なかったらそのままセーブ
+        else
+        {
+            ES3.Save<int>("BombDustBox_Sum", GameController.Instance.getBombDustBox());
+        }
+
+        //プレイ回数を保存
+        if (ES3.KeyExists("Play_Sum"))
+        {
+            int prePlaySum = ES3.Load<int>("Play_Sum");
+            ES3.Save<int>("Play_Sum", prePlaySum + 1);
+        }
+        else
+        {
+            ES3.Save<int>("Play_Sum", 1);
+        }
+
+        //Debug.Log("kokohadoudesuka");
+
+        yield return new WaitForSeconds(0.5f);
+
+        //SceneManager.LoadScene("ResultScene");
+        loadingScene.LoadNextScene("ResultScene");
+
+
     }
 }
