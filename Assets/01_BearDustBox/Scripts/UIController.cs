@@ -94,7 +94,7 @@ public class UIController : MonoBehaviour
 
         audioSource = gameObject.GetComponent<AudioSource>();
 
-        //ES3.DeleteKey("DustBox_SUM");
+        //ES3.DeleteFile("SaveFile.es3");
     }
 
     // Update is called once per frame
@@ -127,6 +127,8 @@ public class UIController : MonoBehaviour
             //countdownが0以下になったとき
             if (countdown <= 0)
             {
+                timerText.text = "FINISH";
+
                 openButton.interactable = false;
                 closeButton.interactable = false;
                 kickButton.interactable = false;

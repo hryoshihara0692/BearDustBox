@@ -56,6 +56,8 @@ public class GameController : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip countdown;
 
+    //public Interstitial interstitial;
+
     //private void Awake()
     //{
     //    if (instance == null)
@@ -85,7 +87,13 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("始まってるのかい");
+        //if (ES3.KeyExists("Play_Sum"))
+        //{
+        //    if (ES3.Load<int>("Play_Sum") % 5 == 0)
+        //    {
+                //interstitial.ShowInterstitialAd();
+        //    }
+        //}
         audioSource = gameObject.GetComponent<AudioSource>();
         StartCoroutine("InstantiateToReady");
     }
