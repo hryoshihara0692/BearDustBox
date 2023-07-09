@@ -94,13 +94,21 @@ public class GameController : MonoBehaviour
                 //interstitial.ShowInterstitialAd();
         //    }
         //}
-        audioSource = gameObject.GetComponent<AudioSource>();
-        StartCoroutine("InstantiateToReady");
+        //audioSource = gameObject.GetComponent<AudioSource>();
+        //StartCoroutine("InstantiateToReady");
     }
 
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    public void GameStart()
+    {
+        Time.timeScale = 1f;
+        audioSource = gameObject.GetComponent<AudioSource>();
+        StartCoroutine("InstantiateToReady");
 
     }
 
@@ -226,7 +234,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator InstantiateToReady()
     {
-        //Debug.Log("始まってるかどうか");
+        Debug.Log("始まってるかどうか");
 
         openButton.interactable = false;
         closeButton.interactable = false;
@@ -235,6 +243,8 @@ public class GameController : MonoBehaviour
         NextDustBox(0.5f);
 
         yield return new WaitForSeconds(0.5f);
+
+        Debug.Log("machi1");
 
         audioSource.Play();
         UIController.Instance.three.SetActive(true);

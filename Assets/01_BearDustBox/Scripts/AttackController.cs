@@ -185,7 +185,7 @@ public class AttackController : MonoBehaviour
                 UIAnimationController.Instance.Maru();
 
                 //次のゴミ箱へ
-                GameController.Instance.NextDustBox(0.25f);
+                GameController.Instance.NextDustBox(0.1f);
 
                 //スコアに+1点
                 UIController.Instance.addScore(1);
@@ -241,7 +241,7 @@ public class AttackController : MonoBehaviour
         kickButton.interactable = false;
         pickUpButton.interactable = false;
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.1f);
 
         openButton.interactable = true;
         closeButton.interactable = true;

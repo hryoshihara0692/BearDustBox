@@ -37,6 +37,8 @@ public class ResultController : MonoBehaviour
             highScoreText.text = score.ToString() + "箱";
             SendScore(ES3.Load<int>("DustBox_HighScore"), "BestScore_DustBox");
         }
+
+        SendScore(ES3.Load<int>("Maru_Sum"), "AmmountDustBox");
     }
 
     // Update is called once per frame

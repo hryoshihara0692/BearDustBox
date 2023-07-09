@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwitterOpener : MonoBehaviour
+public class AdmobManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +14,5 @@ public class TwitterOpener : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void twitterOpen()
-    {
-        Application.OpenURL("https://twitter.com/aoyagi0692");
     }
 }

@@ -130,7 +130,7 @@ public class MainMenuController : MonoBehaviour
             notRankingUIInstance.SetActive(true);
             notRankingActiveFlag = true;
         }
-        else if (!notRankingActiveFlag && !ES3.Load<bool>("AuthCheck"))
+        else if (!notRankingActiveFlag && ES3.Load<bool>("AuthCheck"))
         {
             Social.ShowLeaderboardUI();
         }

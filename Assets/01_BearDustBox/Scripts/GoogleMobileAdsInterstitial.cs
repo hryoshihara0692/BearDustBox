@@ -6,15 +6,27 @@ public class GoogleMobileAdsInterstitial : MonoBehaviour
 {
     private InterstitialAd interstitial;
 
+    private int reShowCount;
+
     private void Start()
     {
-        RequestInterstitial();
+        //指定の回数のときだけRequestを呼ぶ形はどうだろうか
         if (ES3.KeyExists("Play_Sum"))
         {
             if (ES3.Load<int>("Play_Sum") % 3 == 0)
             {
-                ShowInterstitialAd();
+                RequestInterstitial();
+                //ShowInterstitialAd();
             }
+            else
+            {
+                Debug.Log("a");
+                GameController.Instance.GameStart();
+            }
+        }
+        else
+        {
+            GameController.Instance.GameStart();
         }
     }
 
@@ -30,12 +42,15 @@ public class GoogleMobileAdsInterstitial : MonoBehaviour
         this.interstitial = new InterstitialAd(adUnitId);
         DestroyInterstitialAd();
 
-        this.interstitial.OnAdLoaded += HandleOnAdLoaded;
+        //this.interstitial.OnAdLoaded += HandleOnAdLoaded;
+        interstitial.OnAdLoaded += (sender, e) => { ((InterstitialAd)sender).Show(); };
         this.interstitial.OnAdOpening += HandleOnAdOpened;
         this.interstitial.OnAdClosed += HandleOnAdClosed;
 
         AdRequest request = new AdRequest.Builder().Build();
         this.interstitial.LoadAd(request);
+
+        //ShowInterstitialAd();
     }
 
     public void HandleOnAdLoaded(object sender, EventArgs args)
@@ -51,7 +66,11 @@ public class GoogleMobileAdsInterstitial : MonoBehaviour
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
         MonoBehaviour.print("HandleAdClosed event received");
-        RequestInterstitial();
+
+        //ここが広告終了の処理
+        //GameStartの処理をする
+        //RequestInterstitial();
+        GameController.Instance.GameStart();
     }
 
     public void HandleOnAdLeavingApplication(object sender, EventArgs args)
@@ -61,13 +80,27 @@ public class GoogleMobileAdsInterstitial : MonoBehaviour
 
     public void ShowInterstitialAd()
     {
-        if (this.interstitial.IsLoaded())
+        //準備できてたら表示
+        if (interstitial.IsLoaded())
         {
-            this.interstitial.Show();
+            interstitial.Show();
+            reShowCount = 0;
         }
         else
         {
-            Debug.Log("まだ読み込みができていない");
+            Debug.Log("だめ" + reShowCount);
+
+            //準備できてなかったら0.1秒ごとに準備できてるか確認
+            if (reShowCount < 10)
+            {
+                Invoke("InterstitialShow", 0.1f);
+                reShowCount++;
+            }
+            else
+            {
+                //1秒たっても準備できなかったとき
+                reShowCount = 0;
+            }
         }
     }
 

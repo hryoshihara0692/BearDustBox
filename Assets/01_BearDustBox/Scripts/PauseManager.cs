@@ -10,8 +10,12 @@ public class PauseManager : MonoBehaviour
 	//　ポーズUIのインスタンス
 	[SerializeField]
 	private GameObject pauseUIInstance;
+	[SerializeField]
+	private GameObject pausepauseUIInstance;
 
 	private bool activeFlag = false;
+
+	private bool activePauseFlag = false;
 
 	public void pause()
     {
@@ -30,4 +34,23 @@ public class PauseManager : MonoBehaviour
 			Time.timeScale = 1f;
 		}
     }
+
+	public void pausepause()
+	{
+		if (!activePauseFlag)
+		{
+			//pauseUIInstance = GameObject.Instantiate(pauseUIPrefab) as GameObject;
+			pausepauseUIInstance.SetActive(true);
+			activePauseFlag = true;
+			Time.timeScale = 0f;
+		}
+		else
+		{
+			//Destroy(pauseUIInstance);
+			pausepauseUIInstance.SetActive(false);
+			activePauseFlag = false;
+			Time.timeScale = 1f;
+		}
+	}
+
 }
